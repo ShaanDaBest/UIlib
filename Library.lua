@@ -1,6 +1,6 @@
-local UILib = {}
+local CarbonLib = {}
 
-function UILib:CreateWindow(title)
+function CarbonLib:CreateWindow(title)
     local gui = Instance.new("ScreenGui")
     gui.Parent = game.CoreGui
 
@@ -28,7 +28,7 @@ function UILib:CreateWindow(title)
     return window
 end
 
-function UILib:AddButton(window, text, callback)
+function CarbonLib:AddButton(window, text, callback)
     local btn = Instance.new("TextButton")
     btn.Size = UDim2.new(1, -20, 0, 40)
     btn.Text = text
@@ -41,4 +41,4 @@ function UILib:AddButton(window, text, callback)
     end)
 end
 
-return UILib
+return CarbonLib
