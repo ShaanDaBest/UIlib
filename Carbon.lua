@@ -1,6 +1,6 @@
 local CarbonLib = {}
 
-function CarbonLib:CreateWindow(title)
+function Carbon:CreateWindow(title)
     local gui = Instance.new("ScreenGui")
     gui.Parent = game.CoreGui
 
@@ -8,7 +8,16 @@ function CarbonLib:CreateWindow(title)
     frame.Size = UDim2.fromScale(0.4, 0.4)
     frame.Position = UDim2.fromScale(0.3, 0.3)
     frame.BackgroundColor3 = Color3.fromRGB(25,25,25)
+
+    -- 35% transparent
+    frame.BackgroundTransparency = 0.35
+
     frame.Parent = gui
+
+    -- Rounded corners (bigger number = more round)
+    local corner = Instance.new("UICorner")
+    corner.CornerRadius = UDim.new(0, 24)
+    corner.Parent = frame
 
     local titleLabel = Instance.new("TextLabel")
     titleLabel.Size = UDim2.fromScale(1, 0.15)
